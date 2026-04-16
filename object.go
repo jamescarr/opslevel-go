@@ -145,6 +145,7 @@ type ComponentTypeId struct {
 // ComponentType Information about a particular component type
 type ComponentType struct {
 	ComponentTypeId
+	Category           string                        `graphql:"-"` // The category of the component type -- excluded from auto-query for backward compat
 	Description        string                        // The description of the component type (Optional)
 	Href               string                        // The relative path to link to the component type (Required)
 	Icon               ComponentTypeIcon             // The icon associated with the component type (Required)
